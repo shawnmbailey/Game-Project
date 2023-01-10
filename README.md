@@ -4,7 +4,7 @@ This is my game project for V9 cohort
 
 # MVP
 *Minimum Viable Product*
- 
+ - Game Interface
 -Functionality
     -Four Buttons for users to interact with
     -Score Counter
