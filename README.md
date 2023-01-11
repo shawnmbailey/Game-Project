@@ -16,7 +16,7 @@ This is my game project for V9 cohort
 
 
 # Wireframes
-![my wire frame](GameWireFrame.png)
+![my wire frame](GameWireframe.png)
 # License
 
 Copyright (c) 2023 shawnmbailey
