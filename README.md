@@ -4,16 +4,16 @@ This is my game project for V9 cohort
 
 # MVP
 *Minimum Viable Product*
- - Game Interface
+- Game Interface
 - Functionality
-    - Four Buttons for users to interact with
-    - Score Counter
-    - User Lives
+- Four buttons for users to interact with
+- Flashing colors to indicate pattern to users   
 
 # PMVP
  *Post Minimum Viable Product*
-    
-    - Make the Squares Flash
+- Score Counter
+- User Lives
+
 
 # Wireframes
 
