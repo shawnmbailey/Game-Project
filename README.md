@@ -17,6 +17,15 @@ This is my game project for V9 cohort
 
 # Wireframes
 ![my wire frame](GameWireframe.png)
+
+# Instructions
+- Press the start game button.
+- The game will display a sequence of colors.
+- You must match the sequence of colors by clicking on the corresponding buttons .
+- If you match correctly a new pattern will be added.
+- If you make a mistake , restart the game by clicking the start game button.
+- Enjoy!
+
 # License
 
 Copyright (c) 2023 shawnmbailey
