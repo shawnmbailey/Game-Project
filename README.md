@@ -6,6 +6,8 @@ This is my game project for V9 cohort
 *Minimum Viable Product*
 - Game Interface
 - Functionality
+- Start Button
+- Round Indicator
 - Four buttons for users to interact with
 - Flashing colors to indicate pattern to users   
 
