@@ -14,7 +14,7 @@ This is my game project for V9 cohort
 
 # PMVP
  *Post Minimum Viable Product*
-- change button shapes 
+- change button shapes from square to more of a rounded shape
 
 # Wireframes
 ![my wire frame](GameWireframe.png)
