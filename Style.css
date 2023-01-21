@@ -1,7 +1,7 @@
 body {
-    background-image: url(https://cdn.pixabay.com/photo/2015/11/05/10/12/ball-1023985_960_720.png);
-    background-repeat: no-repeat;
-    background-color: black;
+  background: url(https://cdn.pixabay.com/photo/2015/11/05/10/12/ball-1023985_960_720.png) no-repeat center center fixed;
+  background-size: cover;
+  
 }
 
 .togglebtn {
@@ -33,9 +33,6 @@ body {
     font-family: 'Rowdies', cursive;
 }
 
-.toggle-text span:last-child {
-
-}
 
 #title {
     font-family: 'Rowdies', cursive;
@@ -54,11 +51,7 @@ body {
     font-size: 20px;
     height: 30px;
     width: 50px;
-    margin-left: 90px;
-    margin-top: 170px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 30px;
+   margin-top: 100px;
 }
 
 #outter-gameboard {
@@ -104,7 +97,21 @@ body {
     left: 50%;
     cursor: pointer;
 }
+.winScreen{
+    display: flex;
+    flex-direction: column;;
+    width: 100vh;
+    height: 100vh;
+    font-size: 80px;
+    color: white;
 
+    justify-content: center;
+    align-content: center;
+    align-items:center;
+}
+.winText{
+    background-color: black;
+}
 #yellow {
     position: absolute;
     height: 250px;
@@ -136,6 +143,9 @@ body {
 }
 
 #inner-gameboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     background: slategrey;
     border-radius: 50%;
