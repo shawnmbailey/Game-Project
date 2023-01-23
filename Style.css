@@ -6,6 +6,8 @@ body {
 
 .togglebtn {
    cursor:pointer;
+   margin-top: 35px;
+   margin-right: 5px;
 }
 
 .btn {
@@ -14,6 +16,7 @@ body {
     font-size: 1.5em;
     background-color: whitesmoke;
     cursor:pointer;
+    margin-top: 30px;
 }
 
 #controls {
@@ -39,8 +42,34 @@ body {
     position: absolute;
     font-size: 40px;
     margin-left: 35px;
-    margin-top: 40px;
     color: purple;
+    margin-bottom: 180px;
+    margin-right: 80px;
+    margin-top:  60px;
+    margin-left: 90px;
+}
+
+#instructions{
+    align-items: center;
+    color: aqua;
+    background-color: black;
+    box-sizing: border-box;
+    border-style: solid ;
+    border-color: aquamarine;
+    font-size: 15px;
+    width:200px;
+}
+
+#title2{
+     align-items: center;
+    color: aqua;
+    background-color: black;
+    box-sizing: border-box;
+    border-style: solid ;
+    border-color: aquamarine;
+    font-size: 15px;
+    width:100px;
+    text-align: center;
 }
 
 #ROUND {
@@ -51,7 +80,8 @@ body {
     font-size: 20px;
     height: 30px;
     width: 50px;
-   margin-top: 100px;
+   margin-top: 115px;
+   text-align: center;
 }
 
 #outter-gameboard {

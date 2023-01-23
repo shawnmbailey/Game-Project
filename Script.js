@@ -1,11 +1,12 @@
+// Variables for Game elements 
 let pattern = [];
 let playerPattern = [];
 let flash;
 let round;
-let good;
 let pcTurn;
 let on = false;
 let win;
+let sound = true;
 
 const roundCounter = document.querySelector("#ROUND");
 const green = document.querySelector("#green");
@@ -26,13 +27,13 @@ onBtn.addEventListener('click', (event) => {
         
     }
 });
-
+// function to turn on the game and start the first pattern
 startbtn.addEventListener('click', (event) => {
     if (on || win) {
         play();
     }
 });
-
+//Game play function
 function play() {
     win = false;
     pattern = [];
@@ -47,27 +48,22 @@ function play() {
 
     gameTurn();
 }
-
+// Updates Pattern for next round 
 function updatePattern(n){
     for (var i = 0; i < n; i++) {
         pattern.push(Math.floor(Math.random() * 4) + 1);
     }
 }
-
+// function for game turns (computer/player)
 function gameTurn() {
     if (pcTurn) {
         clearColor();
-        let array = [1,4,2,3] // pattern
+        let array = [] // pattern
 
-        console.log('hello')
-
-  let i = 0;                    //  set your counter to 1
-    function myLoop() {         //  create a loop function
-      setTimeout(function() {   //  your code here
-                                // perform logic prior to increment
-                                clearColor();
-                                console.log(pattern)
-                                console.log('trig1')
+  let i = 0;                    
+    function myLoop() {  
+      setTimeout(function() {   
+        clearColor();
        if(pattern[i]==1){
         one();
        }
@@ -81,13 +77,12 @@ function gameTurn() {
         four()
        }
         i++;  
-        flash++;                  //  increment the counter
-        if (i < pattern.length+1) {           //  if the counter < 10, call the loop function
-            console.log('trig')
-          myLoop();             //  ..  again which will trigger another 
+        flash++;                     //  increment the counter
+        if (i < pattern.length+1) {  //  if the counter < 10, call the loop function
+          myLoop();                  //  ..  again which will trigger another 
         } else {
             return pcTurn = false;
-        }                      //  ..  setTimeout()
+        }                           //  ..  setTimeout()
       }, 1000)
     }
   
@@ -95,37 +90,43 @@ function gameTurn() {
    
     }
 }
-
+// functions for sounds to trigger when computer plays pattern
 function one() {
-    if (pcTurn) {
-
+    if (sound) {
+      let audio = document.getElementById("sound1");
+      audio.play();
     }
-
+    sound = true;
     green.style.backgroundColor = "lightgreen";
-}
-
-function two() {
-    if (pcTurn) {
-
+  }
+  
+  function two() {
+    if (sound) {
+      let audio = document.getElementById("sound2");
+      audio.play();
     }
-
+    sound = true;
     red.style.backgroundColor = "tomato";
-}
-
-function three() {
-    if (pcTurn) {
-
+  }
+  
+  function three() {
+    if (sound) {
+      let audio = document.getElementById("sound3");
+      audio.play();
     }
+    sound = true;
     yellow.style.backgroundColor = "yellow";
-}
-
-function four() {
-    if (pcTurn) {
-
+  }
+  
+  function four() {
+    if (sound) {
+      let audio = document.getElementById("sound4");
+      audio.play();
     }
-
+    sound = true;
     blue.style.backgroundColor = "lightskyblue";
-}
+  }
+  
 // full game flashes
 function clearColor() {
     green.style.backgroundColor = "darkgreen";
@@ -154,7 +155,6 @@ green.addEventListener('click', (event) => {
 })
 
 red.addEventListener('click', (event) => {
-    console.log('red')
 
         playerPattern.push(2);
         check();
@@ -189,6 +189,7 @@ blue.addEventListener('click', (event) => {
         }
     
 })
+//Checking pattern input and number of rounds until game is won
 function check(){
    console.log(playerPattern.sort().join(','))
    console.log(pattern.sort().join(','))
@@ -201,24 +202,29 @@ function check(){
         pcTurn= true;
         updatePattern(round)
         gameTurn();
-        if(round>2){ // number of rounds until win
+        if(round>14){ 
           endGame();
         }
     } 
 
     if(playerPattern.length == pattern.length){
-        console.log('incorrect')
+        flashColor();
+        roundCounter.innerHTML="NO!"
+        setTimeout(()=>{
+            roundCounter.innerHTML = round;
+            clearColor();
+        },800)
         playerPattern= [];
     }
 }
-
+// function to win game
 function winGame() {
     flashColor();
     roundCounter.innerHTML = "WIN!";
     on = false;
     win = true;
 }
-
+//End Game and play again function
 function endGame(){
     document.body.innerHTML='<div class="winScreen"><div>You Win!</div><button id="playAgain">Play Again</button></div>'
 let playButton  =  document.querySelector('#playAgain');

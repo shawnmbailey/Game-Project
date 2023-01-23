@@ -9,12 +9,13 @@ This is my game project for V9 cohort
 - Start Button
 - Round Indicator
 - Four buttons for users to interact with
-- Flashing colors to indicate pattern to users 
-- Score Indicator 
+- Flashing colors to indicate pattern to users
+- Wrong Pattern indicator  
 
 # PMVP
  *Post Minimum Viable Product*
-- change button shapes from square to more of a rounded shape
+- add sound to indicate pattern being flashed 
+- strict button
 
 # Wireframes
 ![my wire frame](GameWireframe.png)

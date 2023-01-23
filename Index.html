@@ -6,30 +6,63 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memory-Match</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Style.css">
+
+  <audio id="sound1">
+    <source src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3">
+    </source>
+  </audio>
+  <audio id="sound2">
+    <source src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3">
+    </source>
+  </audio>
+  <audio id="sound3">
+    <source src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3">
+    </source>
+  </audio>
+  <audio id="sound4">
+    <source src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3">
+    </source>
+  </audio>
+
   <script defer src="script.js"></script>
+
 </head>
 
 <body>
+  <div id="instructions">
+    <ol >
+      <h1 id="title2">Instructions</h1>
+      <li>Click checkbox</li>
+      <li>Press start</li>
+      <li>Watch Game pattern</li>
+      <li>Listen to sound</li>
+      <li>repeat the pattern that was displayed</li>
+      <li>Complete all rounds</li>
+      <li>Win the game !</li>
+    </ol>
+  </div>
   <div id="outer-gameboard">
     <div id="green"></div>
     <div id="red"></div>
     <div id="yellow"></div>
     <div id="blue"></div>
     <div id="inner-gameboard" style="border: solid 2px black;">
-      <!-- <div id="title" class="font-effect-emboss">SEV9 SAYS!</div> -->
+      <div id="title" class="font-effect-emboss">SEV9 SAYS!</div>
       <div id="Controls">
         <input type="checkbox" class="togglebtn" id="on">
       </div>
-      
+
       <button class="btn" id="start-button">Start</button>
       <div class="toggle-text">
-        <br/>
+        <br />
       </div>
-      <div id="ROUND" ></div>
+      <div id="ROUND"></div>
       <div class="indicator-text">
       </div>
     </div>
